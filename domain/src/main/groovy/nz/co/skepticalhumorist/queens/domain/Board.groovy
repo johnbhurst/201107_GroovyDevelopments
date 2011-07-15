@@ -63,5 +63,17 @@ class Board {
   int getCol(int row) {
     return pos[row]
   }
+
+  List<Integer> getCols() {
+    pos as List
+  }
+
+  String toString() {
+    StringBuilder result = new StringBuilder()
+    pos.each {
+      result.append " " * it + "*\n"
+    }
+    return result.toString()
+  }
 }
 

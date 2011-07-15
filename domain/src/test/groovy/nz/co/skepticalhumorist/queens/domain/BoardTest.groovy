@@ -92,5 +92,25 @@ class BoardTest {
     assert 2 == b.getCol(3)
   }
 
+  @Test
+  void testGetCols() {
+    def b = new Board(4)
+    b.solve()
+    def cols = b.cols
+    assert [1, 3, 0, 2] == cols
+  }
+
+  @Test
+  void testToString() {
+    def b = new Board(4)
+    b.solve()
+    assert b.toString() ==
+" *\n" +
+"   *\n" +
+"*\n" +
+"  *\n"
+  }
+
+
 }
 
