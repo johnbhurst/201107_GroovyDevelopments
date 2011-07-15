@@ -18,8 +18,14 @@
 
 package nz.co.skepticalhumorist.queens.domain
 
-class BoardTest extends GroovyTestCase {
+import org.junit.Test
+import static org.junit.Assert.assertEquals
+import static org.junit.Assert.assertFalse
+import static org.junit.Assert.assertTrue
 
+class BoardTest {
+
+  @Test
   void testCreate() {
     def b1 = new Board(1)
     def b2 = new Board(2)
@@ -27,6 +33,7 @@ class BoardTest extends GroovyTestCase {
     assertTrue(true)
   }
 
+  @Test
   void testSize() {
     def b1 = new Board(1)
     assertEquals(1, b1.size)
@@ -36,6 +43,7 @@ class BoardTest extends GroovyTestCase {
     assertEquals(20, b20.size)
   }
 
+  @Test
   void testPlace() {
     def b = new Board(4);
     assertEquals(-1, b.getCol(0))
@@ -52,6 +60,7 @@ class BoardTest extends GroovyTestCase {
     assertEquals(2, b.getCol(3))
   }
 
+  @Test
   void testUnplace() {
     def b = new Board(4)
     b.place(0, 1)
@@ -71,6 +80,7 @@ class BoardTest extends GroovyTestCase {
     assertEquals(-1, b.getCol(3))
   }
 
+  @Test
   void testIsOk() {
     def b = new Board(4)
     assertTrue( b.isOk(0, 0)); assertTrue( b.isOk(0, 1)); assertTrue( b.isOk(0, 2)); assertTrue( b.isOk(0, 3));
@@ -88,11 +98,13 @@ class BoardTest extends GroovyTestCase {
     assertTrue(!b.isOk(3, 0)); assertTrue(!b.isOk(3, 1)); assertTrue( b.isOk(3, 2)); assertTrue(!b.isOk(3, 3));
   }
 
+  @Test
   void testSolveFalse() {
     def b = new Board(3)
     assertFalse(b.solve())
   }
 
+  @Test
   void testSolveTrue() {
     def b = new Board(4)
     assertTrue(b.solve())
