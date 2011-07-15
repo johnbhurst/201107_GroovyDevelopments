@@ -1,0 +1,4 @@
+wget --header="Accept: application/json" http://localhost:8080/web/rest/one/4
+
+curl --header "Accept: application/json" http://localhost:8080/web/rest/one/4
+
