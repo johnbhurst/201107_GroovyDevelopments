@@ -8,14 +8,17 @@
 * Groovy++: Even better performance?
 
 2011-07-15
-  Compile+Test domain classes
-  Test with JUnit4                 13:30
-
-  JSON/REST servlet                14:00
-  @Slf4j                           14:00
+  Compile+Test domain classes                                        2011-07-15
+  Test with JUnit4                 13:30                             2011-07-15
+  JSON/REST servlet                14:00                             2011-07-15
+  @Slf4j                           14:00                             2011-07-15
   domain DSL?
   standalone script: performance   15:00
-
   Test with Spock
+
+  Publish jar to local repo;
+  Grape to pick up JAR from local repo
+
+  GPars concurrent solutions
 
 
