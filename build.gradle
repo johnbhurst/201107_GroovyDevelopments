@@ -1,0 +1,16 @@
+subprojects {
+  apply plugin: "groovy"
+  apply plugin: "idea"
+
+  configurations {
+    all*.exclude group: 'commons-logging', module: "commons-logging"
+  }
+  dependencies {
+    groovy group: "org.codehaus.groovy", name: "groovy", version: "1.8.0"
+    compile group: "org.slf4j", name: "jcl-over-slf4j", version: "1.6.1"
+    compile group: "ch.qos.logback", name: "logback-classic", version: "0.9.28" // this should be a runtime dependency but IDEA wants to see it for logback.groovy
+    testCompile group: "junit", name: "junit", version: "4.8.1"
+  }
+}
+
+
