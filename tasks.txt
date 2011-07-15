@@ -1,0 +1,21 @@
+
+* Native JSON support with RESTful web services
+* GPars for concurrent computations
+* DSL syntax developments
+* Gradle build system
+* Scripting goodness with Grapes
+* Groovy performance improvements
+* Groovy++: Even better performance?
+
+2011-07-15
+  Compile+Test domain classes
+  Test with JUnit4                 13:30
+
+  JSON/REST servlet                14:00
+  @Slf4j                           14:00
+  domain DSL?
+  standalone script: performance   15:00
+
+  Test with Spock
+
+

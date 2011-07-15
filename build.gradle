@@ -2,6 +2,9 @@ subprojects {
   apply plugin: "groovy"
   apply plugin: "idea"
 
+  repositories {
+    mavenCentral name: "jboss", urls: "http://repository.jboss.com/maven2/"
+  }
   configurations {
     all*.exclude group: 'commons-logging', module: "commons-logging"
   }
