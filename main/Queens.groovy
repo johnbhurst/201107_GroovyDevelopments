@@ -16,6 +16,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import nz.co.skepticalhumorist.queens.domain.Board
+
 if (args.length == 0) {
   println("I need a number.")
   System.exit(-1)
