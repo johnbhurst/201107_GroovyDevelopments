@@ -1,0 +1,5 @@
+3.943 seconds.
+3.944 seconds.
+4.062 seconds.
+3.916 seconds.
+3.871 seconds.

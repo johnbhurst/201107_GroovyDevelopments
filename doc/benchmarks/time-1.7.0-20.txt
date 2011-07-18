@@ -1,0 +1,5 @@
+39 milliseconds.
+35 milliseconds.
+40 milliseconds.
+37 milliseconds.
+38 milliseconds.
