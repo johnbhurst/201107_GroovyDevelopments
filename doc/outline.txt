@@ -1,0 +1,41 @@
+
+* Native JSON support with RESTful web services
+* GPars for concurrent computations
+* DSL syntax developments
+* Gradle build system
+* Scripting goodness with Grapes
+* Groovy performance improvements
+* Groovy++: Even better performance?
+
+1. Gradle
+  - generate IDEA project files
+
+2. Gradle subprojects
+  - domain subproject
+  - run tests
+  - publish
+
+3. Grapes
+  - script with @Grab
+
+4. JSON
+  - Gradle jetty plugin
+  - Spring 3 RESTful web service Controller
+  - @Slf4j log ASTTransform
+  - wget client
+  - Groovy -e client
+  - Groovy JsonSlurper client
+  - JQuery client
+
+5. GPars
+
+6. Groovypp
+  - Performance comparisons
+  - Bytecode comparison
+
+Domain DSL?
+AST transforms?
+Review other Groovy 1.8.0 features
+Groovy 1.9/2.0
+
+
