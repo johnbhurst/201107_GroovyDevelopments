@@ -1,7 +1,7 @@
-package nz.co.skepticalhumorist.queens.controller
+package wjug.queens.controller
 
 import groovy.util.logging.Slf4j
-import nz.co.skepticalhumorist.queens.domain.Board
+import wjug.queens.domain.Board
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping

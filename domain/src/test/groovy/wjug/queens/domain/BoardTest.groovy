@@ -1,4 +1,4 @@
-package nz.co.skepticalhumorist.queens.domain
+package wjug.queens.domain
 
 import org.junit.Test
 

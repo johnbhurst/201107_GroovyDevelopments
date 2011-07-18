@@ -1,5 +1,5 @@
 @Grab("wjug.queens:domain:00.00.01")
-import nz.co.skepticalhumorist.queens.domain.Board
+import wjug.queens.domain.Board
 
 if (args.length == 0) {
   println("I need a number.")
