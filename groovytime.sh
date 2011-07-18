@@ -68,3 +68,17 @@ java -cp /opt/groovypp-0.4.279/embeddable/groovypp-all-0.4.279_1.8.0.jar:/opt/gr
 java -cp /opt/groovypp-0.4.279/embeddable/groovypp-all-0.4.279_1.8.0.jar:/opt/groovypp-0.4.279/embeddable/groovy-all-1.8.0.jar:. QueensGroovy 20 |grep seconds >>time-0.4.279-20.txt
 java -cp /opt/groovypp-0.4.279/embeddable/groovypp-all-0.4.279_1.8.0.jar:/opt/groovypp-0.4.279/embeddable/groovy-all-1.8.0.jar:. QueensGroovy 20 |grep seconds >>time-0.4.279-20.txt
 
+rm standalone/*class
+/opt/java/bin/javac standalone/QueensJava.java
+java -cp standalone QueensJava 18 |grep seconds  >time-1.7.0-18.txt
+java -cp standalone QueensJava 18 |grep seconds >>time-1.7.0-18.txt
+java -cp standalone QueensJava 18 |grep seconds >>time-1.7.0-18.txt
+java -cp standalone QueensJava 18 |grep seconds >>time-1.7.0-18.txt
+java -cp standalone QueensJava 18 |grep seconds >>time-1.7.0-18.txt
+java -cp standalone QueensJava 20 |grep seconds  >time-1.7.0-20.txt
+java -cp standalone QueensJava 20 |grep seconds >>time-1.7.0-20.txt
+java -cp standalone QueensJava 20 |grep seconds >>time-1.7.0-20.txt
+java -cp standalone QueensJava 20 |grep seconds >>time-1.7.0-20.txt
+java -cp standalone QueensJava 20 |grep seconds >>time-1.7.0-20.txt
+
+
