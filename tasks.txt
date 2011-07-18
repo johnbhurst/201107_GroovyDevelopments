@@ -15,8 +15,11 @@
   standalone script: performance   15:00                             done
 
 2011-07-18
-  NQueens: Groovy++ performance
-  NQueens: Java 7 performance
+  NQueens: Groovy++ performance                                      2011-07-18
+  NQueens: Java 7 performance                                        2011-07-18
+  JSON/REST: wget fetch                                              2011-07-18
+  JSON/REST: groovy -e fetch                                         2011-07-18
+  JSON/REST: groovy fetch + JSON parse + print                       2011-07-18
 
   domain DSL?
   Test with Spock
@@ -26,9 +29,6 @@
 
   GPars concurrent solutions: NQueens
   GPars concurrent solutions: HTTP fetch
-  JSON/REST: wget fetch
-  JSON/REST: groovy -e fetch
-  JSON/REST: groovy fetch + JSON parse + print
   JSON/REST: JQuery fetch + display
 
 
