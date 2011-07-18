@@ -1,0 +1,537 @@
+Compiled from "QueensGroovy.groovy"
+public class Board implements groovy.lang.GroovyObject {
+  public static transient boolean __$stMC;
+
+  public static long __timeStamp;
+
+  public static long __timeStamp__239_neverHappen1310960959783;
+
+  public Board(int);
+    Code:
+       0: aload_0       
+       1: invokespecial #28                 // Method java/lang/Object."<init>":()V
+       4: aload_0       
+       5: iload_1       
+       6: putfield      #30                 // Field size:I
+       9: aload_0       
+      10: iload_1       
+      11: multianewarray #31,  1            // class "[I"
+      15: putfield      #33                 // Field pos:[I
+      18: iconst_0      
+      19: invokestatic  #39                 // Method org/mbte/groovypp/runtime/DefaultGroovyPPMethods.box:(I)Ljava/lang/Integer;
+      22: iload_1       
+      23: invokestatic  #39                 // Method org/mbte/groovypp/runtime/DefaultGroovyPPMethods.box:(I)Ljava/lang/Integer;
+      26: ldc           #40                 // int 0
+      28: invokestatic  #46                 // Method org/codehaus/groovy/runtime/ScriptBytecodeAdapter.createRange:(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/util/List;
+      31: checkcast     #48                 // class groovy/lang/Range
+      34: dup           
+      35: ifnull        131
+      38: dup           
+      39: astore_2      
+      40: instanceof    #50                 // class groovy/lang/EmptyRange
+      43: ifne          132
+      46: aload_2       
+      47: invokeinterface #54,  1           // InterfaceMethod groovy/lang/Range.getFrom:()Ljava/lang/Comparable;
+      52: invokestatic  #60                 // Method org/codehaus/groovy/runtime/typehandling/DefaultTypeTransformation.intUnbox:(Ljava/lang/Object;)I
+      55: aload_2       
+      56: invokeinterface #63,  1           // InterfaceMethod groovy/lang/Range.getTo:()Ljava/lang/Comparable;
+      61: invokestatic  #60                 // Method org/codehaus/groovy/runtime/typehandling/DefaultTypeTransformation.intUnbox:(Ljava/lang/Object;)I
+      64: aload_2       
+      65: invokeinterface #67,  1           // InterfaceMethod groovy/lang/Range.isReverse:()Z
+      70: dup           
+      71: istore_3      
+      72: ifeq          76
+      75: swap          
+      76: istore        4
+      78: istore        5
+      80: iconst_0      
+      81: istore        6
+      83: iload         4
+      85: iload         5
+      87: iload_3       
+      88: ifne          97
+      91: if_icmplt     132
+      94: goto          100
+      97: if_icmpgt     132
+     100: iload         5
+     102: dup           
+     103: istore        6
+     105: iconst_1      
+     106: iload_3       
+     107: ifne          114
+     110: iadd          
+     111: goto          115
+     114: isub          
+     115: istore        5
+     117: aload_0       
+     118: getfield      #33                 // Field pos:[I
+     121: iload         6
+     123: iconst_m1     
+     124: iastore       
+     125: goto          83
+     128: goto          132
+     131: pop           
+     132: aload_0       
+     133: iload_1       
+     134: multianewarray #68,  1            // class "[Z"
+     138: putfield      #70                 // Field col:[Z
+     141: aload_0       
+     142: iconst_2      
+     143: iload_1       
+     144: imul          
+     145: iconst_1      
+     146: iadd          
+     147: multianewarray #68,  1            // class "[Z"
+     151: putfield      #72                 // Field diag1:[Z
+     154: aload_0       
+     155: iconst_2      
+     156: iload_1       
+     157: imul          
+     158: iconst_1      
+     159: iadd          
+     160: multianewarray #68,  1            // class "[Z"
+     164: putfield      #74                 // Field diag2:[Z
+     167: return        
+
+  public void place(int, int);
+    Code:
+       0: aload_0       
+       1: getfield      #33                 // Field pos:[I
+       4: iload_1       
+       5: iload_2       
+       6: iastore       
+       7: aload_0       
+       8: getfield      #70                 // Field col:[Z
+      11: iload_2       
+      12: ldc           #80                 // int 1
+      14: bastore       
+      15: aload_0       
+      16: getfield      #72                 // Field diag1:[Z
+      19: iload_2       
+      20: iload_1       
+      21: isub          
+      22: aload_0       
+      23: getfield      #30                 // Field size:I
+      26: iadd          
+      27: ldc           #80                 // int 1
+      29: bastore       
+      30: aload_0       
+      31: getfield      #74                 // Field diag2:[Z
+      34: iload_2       
+      35: iload_1       
+      36: iadd          
+      37: ldc           #80                 // int 1
+      39: bastore       
+      40: return        
+
+  public int unplace(int);
+    Code:
+       0: aload_0       
+       1: getfield      #33                 // Field pos:[I
+       4: iload_1       
+       5: iaload        
+       6: istore_2      
+       7: aload_0       
+       8: getfield      #33                 // Field pos:[I
+      11: iload_1       
+      12: iconst_m1     
+      13: iastore       
+      14: aload_0       
+      15: getfield      #70                 // Field col:[Z
+      18: iload_2       
+      19: ldc           #40                 // int 0
+      21: bastore       
+      22: aload_0       
+      23: getfield      #72                 // Field diag1:[Z
+      26: iload_2       
+      27: iload_1       
+      28: isub          
+      29: aload_0       
+      30: getfield      #30                 // Field size:I
+      33: iadd          
+      34: ldc           #40                 // int 0
+      36: bastore       
+      37: aload_0       
+      38: getfield      #74                 // Field diag2:[Z
+      41: iload_2       
+      42: iload_1       
+      43: iadd          
+      44: ldc           #40                 // int 0
+      46: bastore       
+      47: iload_2       
+      48: ireturn       
+
+  public boolean isOk(int, int);
+    Code:
+       0: aload_0       
+       1: getfield      #70                 // Field col:[Z
+       4: iload_2       
+       5: baload        
+       6: ifne          40
+       9: aload_0       
+      10: getfield      #72                 // Field diag1:[Z
+      13: iload_2       
+      14: iload_1       
+      15: isub          
+      16: aload_0       
+      17: getfield      #30                 // Field size:I
+      20: iadd          
+      21: baload        
+      22: ifne          40
+      25: aload_0       
+      26: getfield      #74                 // Field diag2:[Z
+      29: iload_2       
+      30: iload_1       
+      31: iadd          
+      32: baload        
+      33: ifne          40
+      36: iconst_1      
+      37: goto          41
+      40: iconst_0      
+      41: ireturn       
+
+  public boolean solve();
+    Code:
+       0: iconst_0      
+       1: istore_1      
+       2: iconst_0      
+       3: istore_2      
+       4: iload_1       
+       5: iflt          79
+       8: iload_1       
+       9: aload_0       
+      10: getfield      #30                 // Field size:I
+      13: if_icmpge     79
+      16: iload_2       
+      17: aload_0       
+      18: getfield      #30                 // Field size:I
+      21: if_icmpge     39
+      24: aload_0       
+      25: iload_1       
+      26: iload_2       
+      27: invokevirtual #88                 // Method isOk:(II)Z
+      30: ifne          39
+      33: iinc          2, 1
+      36: goto          16
+      39: iload_2       
+      40: aload_0       
+      41: getfield      #30                 // Field size:I
+      44: if_icmpge     61
+      47: aload_0       
+      48: iload_1       
+      49: iload_2       
+      50: invokevirtual #90                 // Method place:(II)V
+      53: iinc          1, 1
+      56: iconst_0      
+      57: istore_2      
+      58: goto          4
+      61: iinc          1, -1
+      64: iload_1       
+      65: iflt          4
+      68: aload_0       
+      69: iload_1       
+      70: invokevirtual #92                 // Method unplace:(I)I
+      73: iconst_1      
+      74: iadd          
+      75: istore_2      
+      76: goto          4
+      79: iload_1       
+      80: aload_0       
+      81: getfield      #30                 // Field size:I
+      84: if_icmpne     91
+      87: iconst_1      
+      88: goto          92
+      91: iconst_0      
+      92: ireturn       
+
+  public int getCol(int);
+    Code:
+       0: aload_0       
+       1: getfield      #33                 // Field pos:[I
+       4: iload_1       
+       5: iaload        
+       6: ireturn       
+
+  public java.lang.Object this$dist$invoke$1(java.lang.String, java.lang.Object);
+    Code:
+       0: invokestatic  #99                 // Method $getCallSiteArray:()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+       3: astore_3      
+       4: invokestatic  #103                // Method $get$$class$Board:()Ljava/lang/Class;
+       7: aload_0       
+       8: new           #105                // class org/codehaus/groovy/runtime/GStringImpl
+      11: dup           
+      12: iconst_1      
+      13: anewarray     #4                  // class java/lang/Object
+      16: dup           
+      17: iconst_0      
+      18: aload_1       
+      19: aastore       
+      20: iconst_2      
+      21: anewarray     #107                // class java/lang/String
+      24: dup           
+      25: iconst_0      
+      26: ldc           #109                // String 
+      28: aastore       
+      29: dup           
+      30: iconst_1      
+      31: ldc           #109                // String 
+      33: aastore       
+      34: invokespecial #112                // Method org/codehaus/groovy/runtime/GStringImpl."<init>":([Ljava/lang/Object;[Ljava/lang/String;)V
+      37: invokestatic  #115                // Method $get$$class$java$lang$String:()Ljava/lang/Class;
+      40: invokestatic  #119                // Method org/codehaus/groovy/runtime/ScriptBytecodeAdapter.castToType:(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
+      43: checkcast     #107                // class java/lang/String
+      46: iconst_0      
+      47: anewarray     #4                  // class java/lang/Object
+      50: iconst_1      
+      51: anewarray     #4                  // class java/lang/Object
+      54: dup           
+      55: iconst_0      
+      56: aload_2       
+      57: aastore       
+      58: iconst_1      
+      59: newarray       int
+      61: dup           
+      62: iconst_0      
+      63: ldc           #40                 // int 0
+      65: iastore       
+      66: invokestatic  #123                // Method org/codehaus/groovy/runtime/ScriptBytecodeAdapter.despreadList:([Ljava/lang/Object;[Ljava/lang/Object;[I)[Ljava/lang/Object;
+      69: invokestatic  #127                // Method org/codehaus/groovy/runtime/ScriptBytecodeAdapter.invokeMethodOnCurrentN:(Ljava/lang/Class;Lgroovy/lang/GroovyObject;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+      72: areturn       
+      73: aconst_null   
+      74: areturn       
+
+  public void this$dist$set$1(java.lang.String, java.lang.Object);
+    Code:
+       0: invokestatic  #99                 // Method $getCallSiteArray:()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+       3: astore_3      
+       4: aload_2       
+       5: astore        4
+       7: aload         4
+       9: invokestatic  #103                // Method $get$$class$Board:()Ljava/lang/Class;
+      12: aload_0       
+      13: new           #105                // class org/codehaus/groovy/runtime/GStringImpl
+      16: dup           
+      17: iconst_1      
+      18: anewarray     #4                  // class java/lang/Object
+      21: dup           
+      22: iconst_0      
+      23: aload_1       
+      24: aastore       
+      25: iconst_2      
+      26: anewarray     #107                // class java/lang/String
+      29: dup           
+      30: iconst_0      
+      31: ldc           #109                // String 
+      33: aastore       
+      34: dup           
+      35: iconst_1      
+      36: ldc           #109                // String 
+      38: aastore       
+      39: invokespecial #112                // Method org/codehaus/groovy/runtime/GStringImpl."<init>":([Ljava/lang/Object;[Ljava/lang/String;)V
+      42: invokestatic  #115                // Method $get$$class$java$lang$String:()Ljava/lang/Class;
+      45: invokestatic  #119                // Method org/codehaus/groovy/runtime/ScriptBytecodeAdapter.castToType:(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
+      48: checkcast     #107                // class java/lang/String
+      51: invokestatic  #137                // Method org/codehaus/groovy/runtime/ScriptBytecodeAdapter.setGroovyObjectField:(Ljava/lang/Object;Ljava/lang/Class;Lgroovy/lang/GroovyObject;Ljava/lang/String;)V
+      54: aload         4
+      56: pop           
+      57: return        
+
+  public java.lang.Object this$dist$get$1(java.lang.String);
+    Code:
+       0: invokestatic  #99                 // Method $getCallSiteArray:()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+       3: astore_2      
+       4: invokestatic  #103                // Method $get$$class$Board:()Ljava/lang/Class;
+       7: aload_0       
+       8: new           #105                // class org/codehaus/groovy/runtime/GStringImpl
+      11: dup           
+      12: iconst_1      
+      13: anewarray     #4                  // class java/lang/Object
+      16: dup           
+      17: iconst_0      
+      18: aload_1       
+      19: aastore       
+      20: iconst_2      
+      21: anewarray     #107                // class java/lang/String
+      24: dup           
+      25: iconst_0      
+      26: ldc           #109                // String 
+      28: aastore       
+      29: dup           
+      30: iconst_1      
+      31: ldc           #109                // String 
+      33: aastore       
+      34: invokespecial #112                // Method org/codehaus/groovy/runtime/GStringImpl."<init>":([Ljava/lang/Object;[Ljava/lang/String;)V
+      37: invokestatic  #115                // Method $get$$class$java$lang$String:()Ljava/lang/Class;
+      40: invokestatic  #119                // Method org/codehaus/groovy/runtime/ScriptBytecodeAdapter.castToType:(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;
+      43: checkcast     #107                // class java/lang/String
+      46: invokestatic  #144                // Method org/codehaus/groovy/runtime/ScriptBytecodeAdapter.getGroovyObjectField:(Ljava/lang/Class;Lgroovy/lang/GroovyObject;Ljava/lang/String;)Ljava/lang/Object;
+      49: areturn       
+      50: aconst_null   
+      51: areturn       
+
+  public groovy.lang.MetaClass getMetaClass();
+    Code:
+       0: aload_0       
+       1: invokevirtual #149                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+       4: invokestatic  #155                // Method org/codehaus/groovy/reflection/ClassInfo.getClassInfo:(Ljava/lang/Class;)Lorg/codehaus/groovy/reflection/ClassInfo;
+       7: aload_0       
+       8: invokevirtual #158                // Method org/codehaus/groovy/reflection/ClassInfo.getMetaClass:(Ljava/lang/Object;)Lgroovy/lang/MetaClass;
+      11: areturn       
+
+  public void setMetaClass(groovy.lang.MetaClass);
+    Code:
+       0: aload_0       
+       1: invokevirtual #149                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+       4: invokestatic  #155                // Method org/codehaus/groovy/reflection/ClassInfo.getClassInfo:(Ljava/lang/Class;)Lorg/codehaus/groovy/reflection/ClassInfo;
+       7: aload_0       
+       8: aload_1       
+       9: invokevirtual #164                // Method org/codehaus/groovy/reflection/ClassInfo.setPerInstanceMetaClass:(Ljava/lang/Object;Lgroovy/lang/MetaClass;)V
+      12: return        
+
+  public java.lang.Object invokeMethod(java.lang.String, java.lang.Object);
+    Code:
+       0: aload_0       
+       1: invokevirtual #167                // Method getMetaClass:()Lgroovy/lang/MetaClass;
+       4: aload_0       
+       5: aload_1       
+       6: aload_2       
+       7: invokeinterface #172,  4          // InterfaceMethod groovy/lang/MetaClass.invokeMethod:(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+      12: areturn       
+
+  public java.lang.Object getProperty(java.lang.String);
+    Code:
+       0: aload_0       
+       1: invokevirtual #167                // Method getMetaClass:()Lgroovy/lang/MetaClass;
+       4: aload_0       
+       5: aload_1       
+       6: invokeinterface #176,  3          // InterfaceMethod groovy/lang/MetaClass.getProperty:(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+      11: areturn       
+
+  public void setProperty(java.lang.String, java.lang.Object);
+    Code:
+       0: aload_0       
+       1: invokevirtual #167                // Method getMetaClass:()Lgroovy/lang/MetaClass;
+       4: aload_0       
+       5: aload_1       
+       6: aload_2       
+       7: invokeinterface #180,  4          // InterfaceMethod groovy/lang/MetaClass.setProperty:(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
+      12: return        
+
+  static {};
+    Code:
+       0: invokestatic  #184                // Method __$swapInit:()V
+       3: lconst_0      
+       4: putstatic     #186                // Field __timeStamp__239_neverHappen1310960959783:J
+       7: ldc2_w        #187                // long 1310960959783l
+      10: dup2          
+      11: putstatic     #190                // Field __timeStamp:J
+      14: return        
+      15: return        
+
+  public int getSize();
+    Code:
+       0: aload_0       
+       1: getfield      #30                 // Field size:I
+       4: ireturn       
+
+  public void setSize(int);
+    Code:
+       0: aload_0       
+       1: iload_1       
+       2: putfield      #30                 // Field size:I
+       5: return        
+
+  public static void __$swapInit();
+    Code:
+       0: invokestatic  #99                 // Method $getCallSiteArray:()[Lorg/codehaus/groovy/runtime/callsite/CallSite;
+       3: astore_0      
+       4: aconst_null   
+       5: putstatic     #197                // Field $callSiteArray:Ljava/lang/ref/SoftReference;
+       8: return        
+
+  public void super$1$wait();
+    Code:
+       0: aload_0       
+       1: invokespecial #201                // Method java/lang/Object.wait:()V
+       4: return        
+
+  public java.lang.String super$1$toString();
+    Code:
+       0: aload_0       
+       1: invokespecial #206                // Method java/lang/Object.toString:()Ljava/lang/String;
+       4: areturn       
+
+  public void super$1$wait(long);
+    Code:
+       0: aload_0       
+       1: lload_1       
+       2: invokespecial #209                // Method java/lang/Object.wait:(J)V
+       5: return        
+
+  public void super$1$wait(long, int);
+    Code:
+       0: aload_0       
+       1: lload_1       
+       2: iload_3       
+       3: invokespecial #212                // Method java/lang/Object.wait:(JI)V
+       6: return        
+
+  public void super$1$notify();
+    Code:
+       0: aload_0       
+       1: invokespecial #216                // Method java/lang/Object.notify:()V
+       4: return        
+
+  public void super$1$notifyAll();
+    Code:
+       0: aload_0       
+       1: invokespecial #220                // Method java/lang/Object.notifyAll:()V
+       4: return        
+
+  public java.lang.Class super$1$getClass();
+    Code:
+       0: aload_0       
+       1: invokespecial #149                // Method java/lang/Object.getClass:()Ljava/lang/Class;
+       4: areturn       
+
+  public java.lang.Object super$1$clone();
+    Code:
+       0: aload_0       
+       1: invokespecial #226                // Method java/lang/Object.clone:()Ljava/lang/Object;
+       4: areturn       
+
+  public boolean super$1$equals(java.lang.Object);
+    Code:
+       0: aload_0       
+       1: aload_1       
+       2: invokespecial #231                // Method java/lang/Object.equals:(Ljava/lang/Object;)Z
+       5: ireturn       
+
+  public int super$1$hashCode();
+    Code:
+       0: aload_0       
+       1: invokespecial #235                // Method java/lang/Object.hashCode:()I
+       4: ireturn       
+
+  public void super$1$finalize();
+    Code:
+       0: aload_0       
+       1: invokespecial #239                // Method java/lang/Object.finalize:()V
+       4: return        
+
+  static java.lang.Class class$(java.lang.String);
+    Code:
+       0: aload_0       
+       1: invokestatic  #279                // Method java/lang/Class.forName:(Ljava/lang/String;)Ljava/lang/Class;
+       4: areturn       
+       5: astore_1      
+       6: new           #281                // class java/lang/NoClassDefFoundError
+       9: dup           
+      10: aload_1       
+      11: invokevirtual #286                // Method java/lang/ClassNotFoundException.getMessage:()Ljava/lang/String;
+      14: invokespecial #289                // Method java/lang/NoClassDefFoundError."<init>":(Ljava/lang/String;)V
+      17: athrow        
+    Exception table:
+       from    to  target type
+           0     5     5   Class java/lang/ClassNotFoundException
+}
