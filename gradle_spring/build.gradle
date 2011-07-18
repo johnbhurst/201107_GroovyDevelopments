@@ -1,0 +1,12 @@
+apply plugin: "java"
+apply plugin: "idea"
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile "org.springframework:spring-orm:3.0.5.RELEASE"
+  compile "org.hibernate:hibernate-core:3.6.2.Final"
+}
+
