@@ -1,5 +1,5 @@
 
-@Typed
+//@Typed
 class Board {
   int size
   private int[] pos
@@ -43,7 +43,7 @@ class Board {
     int col = 0
     while (row >= 0 && row < size) {
       while (col < size && !isOk(row, col)) {
-        col++;
+        col++
       }
       if (col < size) {
         place(row, col)
@@ -72,17 +72,14 @@ if (args.length == 0) {
 }
 size = Integer.parseInt(args[0])
 Board b = new Board(size)
-long start = new Date().getTime()
+long start = new Date().time
 if (b.solve()) {
-  long elapsed = new Date().getTime() - start
+  long elapsed = new Date().time - start
   for (i in 0..<size) {
     int col = b.getCol(i)
-    for (j in 0..<col) {
-      print(" ")
-    }
-    println("*")
+    println " " * col + "*"
   }
-  println("" + elapsed/1000 + " seconds.")
+  println("${elapsed/1000} seconds.")
 }
 
 
