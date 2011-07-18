@@ -43,7 +43,7 @@ class Board {
     int col = 0
     while (row >= 0 && row < size) {
       while (col < size && !isOk(row, col)) {
-        col++;
+        col++
       }
       if (col < size) {
         place(row, col)
