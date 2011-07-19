@@ -23,12 +23,11 @@
   Publish jar to local repo;                                         2011-07-18
   Grape to pick up JAR from local repo                               2011-07-18
 
+2011-07-20
   GPars concurrent solutions: NQueens
   GPars concurrent solutions: HTTP fetch
-  JSON/REST: JQuery fetch + display
-
   Gradle to build with Groovypp
-
   domain DSL?
   Test with Spock
 
+  JSON/REST: JQuery fetch + display
