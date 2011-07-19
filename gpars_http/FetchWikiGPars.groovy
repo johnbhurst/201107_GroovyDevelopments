@@ -1,3 +1,4 @@
+import groovyx.gpars.GParsPool
 
 def urls = [
   "http://en.wikipedia.org/wiki/Groovy_(programming_language)",
@@ -23,7 +24,10 @@ def fetch = {url ->
   println "Saved $filename"
 }
 
-urls.each {url ->
-  fetch(url)
+GParsPool.withPool() {
+  def fetchAsync = fetch.async()
+  urls.each {url ->
+    fetchAsync(url)
+  }
 }
 
