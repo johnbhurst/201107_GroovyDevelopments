@@ -1,13 +1,1 @@
 
-apply plugin: "maven"
-
-group = "wjug.queens"
-version = "00.00.01"
-status = "release"
-
-uploadArchives {
-  repositories.mavenDeployer {
-    repository(url: "file://localhost/tmp/myRepo/")
-  }
-}
-

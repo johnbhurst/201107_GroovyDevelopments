@@ -1,4 +1,4 @@
-@Grab("wjug.queens:domain:00.00.01")
+@Grab("wjug.queens:domain_publish:00.00.01")
 import wjug.queens.domain.Board
 
 if (args.length == 0) {
