@@ -1,0 +1,143 @@
+/*
+h1 {
+  position: absolute;
+  top: 10px;
+  left: 500px;
+  font-family: sans-serif;
+}
+
+h2 {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  font-family: sans-serif;
+}
+
+.nav {
+  position: absolute;
+  top: 2px;
+  left: 740px;
+  font-family: sans-serif;
+  word-spacing: 20px;
+}
+
+body {
+  background-color: #efefef;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  margin-left: 60px;
+  margin-top: 100px;
+}
+
+.window {
+  color: #000000;
+  background-color: #ffffff;
+}
+*/
+
+.keyword {
+  color: #800080;
+}
+
+.comment {
+  color: #008000;
+  background-color: #ffffff;
+  font-style: italic;
+}
+
+.emph {
+  font-weight: bold;
+}
+
+div.container {
+  min-height: 10em;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+img.displayed {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+img {
+  border-top: 1px solid #666666;
+  border-left: 1px solid #666666;
+  border-right: 3px solid #666666;
+  border-bottom: 3px solid #666666;
+}
+*/
+
+pre.displayed {
+  margin-left: 20px;
+  margin-right: auto;
+  display: block;
+  background-color: #ffffff;
+  font-size: 100%;
+  width: 20em;
+}
+pre.displayed_smaller {
+  margin-left: 20px;
+  margin-right: auto;
+  display: block;
+  background-color: #ffffff;
+  font-size: 50%;
+  width: 20em;
+}
+pre.displayed_smaller40 {
+  margin-left: 20px;
+  margin-right: auto;
+  display: block;
+  background-color: #ffffff;
+  font-size: 40%;
+  width: 20em;
+}
+/*
+  width: 960px;
+  padding: 5px;
+  border-top: 1px solid #666666;
+  border-left: 1px solid #666666;
+  border-right: 3px solid #666666;
+  border-bottom: 3px solid #666666;
+  */
+
+
+div#footer h1 {
+  font-size: 80%;
+  font-weight: normal;
+}
+
+div#footer h2 {
+  font-size: 75%;
+  font-style: normal;
+  font-weight: normal;
+}
+
+span#csHere,
+span#csTotal,
+span#csSep {
+  font: normal normal normal 1em/1.5em Verdana, Helvetica, sans-serif;
+}
+
+div#currentSlide {
+  bottom: 30px;
+}
+
+img.displayed {
+  margin-left: 20px;
+  border-right: 1px solid #999;
+  border-bottom: 2px solid #999;
+  border-top: 0;
+  border-left: 0;
+  padding: 3px;
+}
+
+div.slide h1 {
+  left: 0;
+  padding:0;
+  margin-left: 70px;
+  color: #eee;
+}
