@@ -1,4 +1,3 @@
-
 * Native JSON support with RESTful web services
 * GPars for concurrent computations
 * DSL syntax developments
@@ -8,15 +7,27 @@
 * Groovy++: Even better performance?
 
 1. Gradle
+  - compile groovy
+  - run tests
   - generate IDEA project files
+gradle test
+google-chrome build/reports/tests/index.html
+gradle idea
 
-2. Gradle subprojects
+2. Gradle publish + Grapes fetch
+  - Gradle publish to Maven
+  - Grapes/Ivy configuration
+  - @Grab
+gradle test upload
+find /tmp/myRepo/
+groovy script_grab/Queens.groovy
+
+3. Gradle multi module project
   - domain subproject
   - run tests
-  - publish
-
-3. Grapes
-  - script with @Grab
+  - show power assert
+gradle test
+gradle jettyRun
 
 4. JSON
   - Gradle jetty plugin
@@ -25,9 +36,18 @@
   - wget client
   - Groovy -e client
   - Groovy JsonSlurper client
-  - JQuery client
+wget http://localhost:8080/web/rest/one/4
+curl http://localhost:8080/web/rest/one/4
+groovy -e "println new URL('http://localhost:8080/web/rest/one/6').text"
+groovy bin/RestJson.groovy 5
 
 5. GPars
+  - FetchWiki
+  - FetchWikiAsync
+rm *html
+time groovy FetchWiki.groovy
+rm *html
+time groovy FetchWikiGPars.groovy
 
 6. Groovypp
   - Performance comparisons
@@ -35,6 +55,14 @@
 
 Domain DSL?
 AST transforms?
+  @Log
+  @AutoClone
+  @AutoExternalizable
+  @ToString
+  @EqualsAndHashCode
+  @TupleConstructor
+  @InheritConstructors
+  @WithRead/WriteLock
 Review other Groovy 1.8.0 features
 Groovy 1.9/2.0
 

@@ -1,0 +1,32 @@
+rm -rf ~/.ivy2/
+
+
+set JAVA_OPTS "-Dgrape.config=/home/jhurst/work/SkepticalHumorist/talks/201107_GroovyDevelopments/ivysettings.xml"
+
+cd domain_standalone/
+gradle test
+google-chrome build/reports/tests/index.html
+
+cd ../gradle_idea/
+gradle idea
+
+cd ../domain_publish/
+gradle test upload
+find /tmp/myRepo/
+groovy script_grab/Queens.groovy
+
+cd ../
+gradle test
+gradle jettyRun
+wget http://localhost:8080/web/rest/one/4
+curl http://localhost:8080/web/rest/one/4
+groovy -e "println new URL('http://localhost:8080/web/rest/one/6').text"
+groovy bin/RestJson.groovy 5
+
+cd gpars_http/
+rm *html
+time groovy FetchWiki.groovy
+rm *html
+time groovy FetchWikiGPars.groovy
+
+
