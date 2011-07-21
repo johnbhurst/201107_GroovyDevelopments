@@ -49,8 +49,10 @@ time groovy FetchWiki.groovy
 rm *html
 time groovy FetchWikiGPars.groovy
 
-6. Groovypp
+6. Performance
   - Performance comparisons
+  - Groovypp @Typed
+  - Performance comparisons II
   - Bytecode comparison
 
 Domain DSL?
